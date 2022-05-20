@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .theme-green {
+    background: #0089a7;
+  }
+  .theme-blue {
+    background: #4b52f0;
+  }
+  .theme-blue2 {
+    background: #7db9de;
+  }
+  .theme-blue {
+    background: #a5dee4;
+  }
+}
+
 html,
 body {
   padding: 0;

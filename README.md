@@ -19,3 +19,9 @@ npm i -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```CLI
 npm install @reduxjs/toolkit
 ```
+
+## firebase
+
+```CLI
+npm install firebase dotenv
+```
