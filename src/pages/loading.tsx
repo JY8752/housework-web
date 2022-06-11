@@ -11,7 +11,8 @@ const Loading: NextPage = () => {
         loginByGoogle();
       }
     }, 2000);
-  }, [loginByGoogle, getCurrentUser]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="h-screen w-screen flex items-center justify-center">
       <TailSpin color="#00BFFF" height={150} width={150} />

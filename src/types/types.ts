@@ -15,3 +15,9 @@ export type User = {
   email: string;
   name: string;
 };
+
+export type HouseWork = {
+  id: string;
+  name: string;
+  point: number;
+};

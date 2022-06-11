@@ -22,9 +22,12 @@ export const AuthProvider = (props: Props) => {
       router.pathname !== '/login' &&
       router.pathname !== '/loading'
     ) {
+      console.log(user);
+      console.log('loginに戻りますよ');
       router.push('/login');
     }
-  }, [router, getCurrentUser]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.pathname]);
 
   if (
     !getCurrentUser &&

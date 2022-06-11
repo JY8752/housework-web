@@ -11,18 +11,16 @@ export const useAuthUser = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const relogin = useCallback(
-    (authUser: User) => {
-      dispatch(
-        login({
-          uid: authUser.uid,
-          name: authUser.displayName || '',
-          email: authUser.email || '',
-        }),
-      );
-    },
-    [dispatch],
-  );
+  const relogin = useCallback((authUser: User) => {
+    dispatch(
+      login({
+        uid: authUser.uid,
+        name: authUser.displayName || '',
+        email: authUser.email || '',
+      }),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (authUser) => {
@@ -32,12 +30,14 @@ export const useAuthUser = () => {
         setIsLoading(false);
         router.push('/');
       } else {
+        console.log('logoutです');
         dispatch(logout());
         setIsLoading(false);
       }
     });
     return () => unsub();
-  }, [dispatch, relogin, router]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return {
     user,

@@ -14,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="flex theme-blue h-28 items-center justify-between pl-3">
+    <div className="flex theme-blue2 h-28 items-center justify-between pl-3">
       <div>
         <div className="text-white text-4xl">House Work</div>
         <div className="text-white text-4xl">Management</div>
